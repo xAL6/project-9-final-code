@@ -14,7 +14,7 @@ const port = process.env.PORT || 8080; // process.env.PORT是Heroku自動動態�
 
 // 連結MongoDB
 mongoose
-  .connect(MONGODB_CONNECTION)
+  .connect(process.env.MONGODB_CONNECTION)
   .then(() => {
     console.log("連結到mongodb...");
   })
